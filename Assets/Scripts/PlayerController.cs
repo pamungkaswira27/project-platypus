@@ -1,14 +1,11 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
 
-    [SerializeField] float positionPitchFactor;
-    [SerializeField] float controlPitchFactor;
-    [SerializeField] float positionYawFactor;
-    [SerializeField] float controlRollFactor;
+    [SerializeField] float rollSpeed;
+    [SerializeField] float pitchFactor;
 
     [SerializeField] float xBound;
     [SerializeField] float yBound;
@@ -16,14 +13,10 @@ public class PlayerController : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
-    float pitch;
-    float yaw;
-    float roll;
-
     void Update()
     {
         MovePlayer();
-        RotatePlayer();
+        RollPlayer();
     }
 
     void MovePlayer()
@@ -34,25 +27,19 @@ public class PlayerController : MonoBehaviour
         float xDelta = Time.deltaTime * horizontalInput * movementSpeed;
         float yDelta = Time.deltaTime * verticalInput * movementSpeed;
 
-        float xPos = transform.localPosition.x + xDelta;
-        float yPos = transform.localPosition.y + yDelta;
+        float xPos = transform.position.x + xDelta;
+        float yPos = transform.position.y + yDelta;
 
         xPos = Mathf.Clamp(xPos, -xBound, xBound);
         yPos = Mathf.Clamp(yPos, -yBound, yBound);
 
-        transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
+        transform.position = new Vector3(xPos, yPos, transform.position.z);
     }
 
-    void RotatePlayer()
+    void RollPlayer()
     {
-        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
-        float pitchDueToControlThrow = verticalInput * controlPitchFactor;
-
-        float pitch = pitchDueToPosition + pitchDueToControlThrow;
-        float yaw = transform.localPosition.x * positionYawFactor;
-        float roll = horizontalInput * controlRollFactor;
-
-        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
-
+        float roll = rollSpeed * horizontalInput;
+        float pitch = pitchFactor * verticalInput;
+        transform.rotation = Quaternion.Euler(pitch, transform.rotation.y, roll);
     }
 }
