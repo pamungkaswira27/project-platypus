@@ -35,6 +35,8 @@ public class PlayerShooter : MonoBehaviour
             Destroy(leftProjectile, projectileLifetime);
             Destroy(rightProjectile, projectileLifetime);
 
+            AudioManager.Instance.PlayShootSFX();
+
             yield return new WaitForSeconds(fireRate);
         }
     }

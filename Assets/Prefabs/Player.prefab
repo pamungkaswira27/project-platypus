@@ -129,7 +129,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3037167466406970698, guid: 710cb250cb565fb43895319b14b564a0, type: 3}
   projectileSpeed: 50
   projectileLifetime: 3
-  fireRate: 0.1
+  fireRate: 0.2
   leftShootPoint: {fileID: 3558389432132793354}
   rightShootPoint: {fileID: 3558389430986456628}
 --- !u!1 &3558389432120128147
