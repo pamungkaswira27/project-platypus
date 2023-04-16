@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8552768854449991402}
   - component: {fileID: 8552768854449991403}
   - component: {fileID: 8552768854449991404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_UFO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,9 +114,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3987311353195648191, guid: 79d2751e91fbd54478072cb91dddbb50, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2845779275431937956, guid: 79d2751e91fbd54478072cb91dddbb50, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 79d2751e91fbd54478072cb91dddbb50, type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79d2751e91fbd54478072cb91dddbb50, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3833836350996402130, guid: 79d2751e91fbd54478072cb91dddbb50, type: 3}
       propertyPath: m_Materials.Array.data[0]

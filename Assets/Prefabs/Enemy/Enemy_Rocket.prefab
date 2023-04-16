@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5845096348367189555}
   - component: {fileID: 5845096348367189554}
   - component: {fileID: 5845096348367189565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_Rocket
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2845779275431937956, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1534069715214155643, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -123,14 +127,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6a4036f5d3c2a4449a04ac7711b6d314, type: 2}
+    - target: {fileID: 689328245660105409, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 990761963331379121, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898447086100228265, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3165572859155726305, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b3a9048f9a944b74f92373f07cc89525, type: 2}
+    - target: {fileID: 3575127362896153484, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5144549477940431826, guid: b934da65ddf50dc48a7c02481c90ac34, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

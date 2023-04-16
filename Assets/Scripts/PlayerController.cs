@@ -10,13 +10,36 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float xBound;
     [SerializeField] float yBound;
 
+    Health health;
+
     float horizontalInput;
     float verticalInput;
+
+    void Awake()
+    {
+        health = FindObjectOfType<Health>();
+    }
 
     void Update()
     {
         MovePlayer();
         RollPlayer();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            health.DecreaseHealth();
+
+            if (!GameManager.Instance.isGameOver)
+            {
+                EventManager.Fire_OnPlayerDied();
+            }
+
+            GameManager.Instance.isPlayerDie = true;
+            Destroy(gameObject);
+        }
     }
 
     void MovePlayer()
