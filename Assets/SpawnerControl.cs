@@ -1,18 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class SpawnerControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float countdown;
+    [SerializeField] private GameObject SpawnPoint;
+
+    public Wave[] waves;
+
+    private int currentWaveIndex = 0;
+
+    private void Update()
     {
-        
+        countdown -= Time.deltaTime;
+
+        if (countdown <= 0)
+        {
+            countdown = waves[currentWaveIndex].timeToNextWave;
+            StartCoroutine(SpawnWave());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator SpawnWave()
     {
-        
+        for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
+        {
+            Instantiate(waves[currentWaveIndex].enemies[i], SpawnPoint.transform);
+            yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
+        }
     }
+}
+
+[System.Serializable]
+public class Wave
+{
+    public Enemy[] enemies;
+    public float timeToNextEnemy;
+    public float timeToNextWave;
+
+    
 }
