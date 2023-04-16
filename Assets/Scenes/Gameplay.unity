@@ -496,7 +496,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &405669098
 GameObject:
@@ -1051,6 +1051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 678137089}
+  - component: {fileID: 678137090}
   m_Layer: 0
   m_Name: End Screen UI
   m_TagString: Untagged
@@ -1074,6 +1075,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678137090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678137088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0250bb8912e2bd4e92b5a72af966dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlay: {fileID: 2057306773}
+  endPanel: {fileID: 1667492965}
 --- !u!1 &712860290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1164,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958895122
 GameObject:
@@ -1234,7 +1249,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 958895125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 678137090}
+        m_TargetAssemblyTypeName: EndScreenUI, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &958895125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,63 +1338,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 50}
   m_SizeDelta: {x: 240, y: 100}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1084769466
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8178418088015731736, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_Name
-      value: Enemy_Boss Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8178418088015731737, guid: 8770113947af3f840ac51575566bbf14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8770113947af3f840ac51575566bbf14, type: 3}
 --- !u!1 &1180240382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,7 +1409,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336112819
 GameObject:
@@ -1693,6 +1663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667492964}
+  - component: {fileID: 1667492965}
   m_Layer: 0
   m_Name: End Menu
   m_TagString: Untagged
@@ -1723,6 +1694,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -920, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1667492965
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667492963}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1774366900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1789,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1774366903}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 678137090}
+        m_TargetAssemblyTypeName: EndScreenUI, Assembly-CSharp
+        m_MethodName: QuitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1774366903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,6 +2348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Post Processing
       objectReference: {fileID: 0}
+    - target: {fileID: 2689012410510446893, guid: 31752ca91290b1e4087f8f09160fe6a9, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31752ca91290b1e4087f8f09160fe6a9, type: 3}
 --- !u!1001 &4420600930020869657
@@ -2364,7 +2363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4420600928464785033, guid: f655b377f9d17ce4aab83184d251edfc, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4420600928464785033, guid: f655b377f9d17ce4aab83184d251edfc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2423,6 +2422,10 @@ PrefabInstance:
       propertyPath: spawnPosition
       value: 
       objectReference: {fileID: 1256854135}
+    - target: {fileID: 5764633945613437617, guid: ee59e02888cafae4b92bdd2c67541f5a, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 678137088}
     - target: {fileID: 5764633945613437618, guid: ee59e02888cafae4b92bdd2c67541f5a, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2541,6 +2544,14 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1564477584}
+    - target: {fileID: 8155112594199428527, guid: e3d43dd499449454890ead67a7ef647d, type: 3}
+      propertyPath: m_ShowToolkit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155112594199428527, guid: e3d43dd499449454890ead67a7ef647d, type: 3}
+      propertyPath: m_ShowCustomSorter
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8155112594437698889, guid: e3d43dd499449454890ead67a7ef647d, type: 3}
       propertyPath: m_Name
       value: Cameras

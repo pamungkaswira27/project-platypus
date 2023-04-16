@@ -3,6 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] int health;
+    [SerializeField] GameObject endScreen;
 
     public int GetPlayerHealth()
     {
@@ -16,6 +17,7 @@ public class Health : MonoBehaviour
         if (health <= 0 )
         {
             GameManager.Instance.isGameOver = true;
+            endScreen.SetActive(true);
         }
     }
 }

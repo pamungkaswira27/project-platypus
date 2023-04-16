@@ -62,3 +62,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  endScreen: {fileID: 0}
